@@ -1,12 +1,13 @@
 import './App.min.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import OurSpecialty from './components/OurSpecialty';
 import PicksFlashSale from './components/PicksFlashSale';
+import SeventyOff from './components/SeventyOff';
 import Showcase from './components/Showcase';
 import Support from './components/Support';
-import CustomerSupportIcon from './components/SupportIcons/CustomerSupportIcon';
-import SecuredPaymentIcon from './components/SupportIcons/SecuredPaymentIcon';
-import TruckIcon from './components/SupportIcons/TruckIcon';
+import WinterNewArrivals from './components/WinterNewArrivals';
+
 
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
     <>
       <Navbar />
       <Showcase />
+      <WinterNewArrivals />
       <PicksFlashSale />
+      <OurSpecialty />
+      <SeventyOff />
       <Support />
       <Footer />
     </>

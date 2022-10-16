@@ -1,0 +1,47 @@
+.new-arrivals {
+    display: flex;
+    background-color: #eaeaeb;
+    justify-content: space-between;
+
+    .na-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            width: 50%;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .btn-theme {
+            margin-top: 1rem;
+            width: 70%;
+            margin-left: 3rem;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .new-arrivals {
+
+        .na-info {
+            margin-top: 2rem;
+
+            .btn-theme {
+                margin-bottom: 2rem;
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1745px) {
+    .new-arrivals {
+        width: 100%;
+    }
+}

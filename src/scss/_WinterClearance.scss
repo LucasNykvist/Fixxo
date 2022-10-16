@@ -1,0 +1,32 @@
+.Winter-clearance {
+    display: flex;
+    flex: 2;
+
+    .wc-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #cac0be;
+        padding: 3rem;
+
+        h1 {
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .Winter-clearance {
+        img {
+            display: none;
+        }
+    }
+}
