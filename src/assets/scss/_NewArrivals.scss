@@ -1,3 +1,5 @@
+@import './Variables';
+
 .new-arrivals {
     display: flex;
     background-color: #eaeaeb;
@@ -12,7 +14,7 @@
         h1 {
             width: 50%;
             font-size: 45px;
-            font-weight: bold;
+            font-weight: $font-weight-bold;
         }
 
         .btn-theme {

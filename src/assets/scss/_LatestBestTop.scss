@@ -1,0 +1,23 @@
+@import './Variables';
+
+.latest-best-top {
+    margin-top: 3rem;
+
+    .container {
+        max-width: 1130px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 970px) {
+    .latest-best-top {
+        .container {
+            max-width: 1130px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}

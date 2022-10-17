@@ -1,0 +1,18 @@
+@import './Variables';
+
+.big-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #BBBBBB;
+    min-width: 825px;
+    min-height: 200px;
+
+    h1 {
+        font-size: $font-size-45;
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+    }
+}

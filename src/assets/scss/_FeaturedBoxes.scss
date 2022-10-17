@@ -1,0 +1,9 @@
+@import './Variables';
+
+.featured-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: 1rem;
+    max-width: 573px;
+}

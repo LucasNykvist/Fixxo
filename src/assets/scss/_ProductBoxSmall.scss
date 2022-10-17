@@ -1,0 +1,46 @@
+@import './Variables';
+
+.product-box-small {
+    display: flex;
+
+    .product-box-small-card {
+        width: 160px;
+        height: 132px;
+        background-color: #F5F5F5;
+    }
+
+    .product-box-small-info {
+        margin-left: 10px;
+        width: 140px;
+        height: 132px;
+
+        .category-sm {
+            margin: 0;
+            font-size: 13px;
+            font-weight: $font-weight-medium;
+            color: #616365;
+        }
+
+        h4 {
+            margin: 5px 0 0 0;
+            font-size: $font-size-16;
+            font-weight: $font-weight-semiBold;
+        }
+
+        ul {
+            font-size: 14px;
+            gap: 3px;
+            margin: 10px 0 0 0;
+            color: #FF7373;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+
+        .price {
+            margin: 16px 0 0 0;
+            font-size: 18px;
+            font-weight: $font-weight-semiBold;
+        }
+    }
+}

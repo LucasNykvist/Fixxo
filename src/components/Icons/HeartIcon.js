@@ -1,9 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const HeartIcon = () => {
+const HeartIcon = (props) => {
     return (
-        <NavLink to="/wishlist" end><i class="fa-light fa-heart"></i></NavLink>
+        <NavLink to="/wishlist" end>
+            <i class="fa-light fa-heart">
+                <span className='badge rounded-circle'>{props.badge}</span>
+            </i>
+        </NavLink >
     )
 }
 

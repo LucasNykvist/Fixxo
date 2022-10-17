@@ -8,6 +8,10 @@ import Showcase from '../sections/Showcase';
 import Support from '../sections/Support';
 import WinterNewArrivals from '../sections/WinterNewArrivals';
 import Footer from '../sections/Footer'
+import FeaturedProduct from '../sections/FeaturedProduct';
+import FeaturedSale from '../sections/FeaturedSale';
+import FeaturedSaleReverse from '../sections/FeaturedSaleReverse';
+import LatestBestTop from '../sections/LatestBestTop';
 
 const HomeView = () => {
     return (
@@ -15,9 +19,13 @@ const HomeView = () => {
             <Navbar />
             <Showcase />
             <WinterNewArrivals />
+            <FeaturedProduct />
             <PicksFlashSale />
             <OurSpecialty />
+            <FeaturedSale />
+            <FeaturedSaleReverse />
             <SeventyOff />
+            <LatestBestTop />
             <Support />
             <Footer />
         </>

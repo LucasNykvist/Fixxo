@@ -5,6 +5,7 @@ import HeartIcon from '../components/Icons/HeartIcon'
 import SearchIcon from '../components/Icons/SearchIcon'
 import ShuffleIcon from '../components/Icons/ShuffleIcon'
 import { NavLink } from 'react-router-dom'
+import NavIcon from '../components/Icons/NavIcon'
 
 const Navbar = () => {
     return (
@@ -21,10 +22,10 @@ const Navbar = () => {
                 </div>
 
                 <div className='shopping-icons'>
-                    <SearchIcon />
-                    <ShuffleIcon />
-                    <HeartIcon />
-                    <BagIcon />
+                    <NavIcon icon="fa-solid fa-magnifying-glass position-relative" link="/search" />
+                    <NavIcon icon="fa-light fa-code-compare position-relative" link="/compare" />
+                    <NavIcon icon="fa-light fa-heart position-relative" link="/wishlist" value="1" />
+                    <NavIcon icon="fa-light fa-bag-shopping position-relative" link="/shoppingcart" value="3" />
                 </div>
             </div>
         </nav >
