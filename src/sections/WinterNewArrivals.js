@@ -1,6 +1,6 @@
 import React from 'react'
-import NewArrivals from './NewArrivals'
-import WinterClearance from './WinterClearance'
+import NewArrivals from '../components/NewArrivals'
+import WinterClearance from '../components/WinterClearance'
 
 const WinterNewArrivals = () => {
     return (

@@ -1,27 +1,32 @@
 import './App.min.css';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import OurSpecialty from './components/OurSpecialty';
-import PicksFlashSale from './components/PicksFlashSale';
-import SeventyOff from './components/SeventyOff';
-import Showcase from './components/Showcase';
-import Support from './components/Support';
-import WinterNewArrivals from './components/WinterNewArrivals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ContactsView from './views/ContactView';
+import HomeView from './views/HomeView';
+import NotFoundView from './views/NotFoundView';
+import CategoriesView from './views/CategoriesView';
+import ProductsView from './views/ProductsView';
+import SearchView from './views/SearchView';
+import CompareView from './views/CompareView';
+import ShoppingcartView from './views/ShoppingcartView';
+import WishlistView from './views/WishlistView';
 
 
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Showcase />
-      <WinterNewArrivals />
-      <PicksFlashSale />
-      <OurSpecialty />
-      <SeventyOff />
-      <Support />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomeView />} />
+        <Route path='/categories' element={<CategoriesView />} />
+        <Route path='/products' element={<ProductsView />} />
+        <Route path='/contacts' element={<ContactsView />} />
+        <Route path='/search' element={<SearchView />} />
+        <Route path='/compare' element={<CompareView />} />
+        <Route path='/wishlist' element={<WishlistView />} />
+        <Route path='/shoppingcart' element={<ShoppingcartView />} />
+        <Route path='*' element={<NotFoundView />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

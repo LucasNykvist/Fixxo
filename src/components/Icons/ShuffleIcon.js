@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const ShuffleIcon = () => {
     return (
-        <a className='icon-1' href=''><i class="fa-light fa-code-compare"></i></a>
+        <NavLink to="/compare" end><i class="fa-light fa-code-compare"></i></NavLink>
     )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import FlashSale from './FlashSale'
-import TopPicks from './TopPicks'
+import FlashSale from '../components/FlashSale'
+import TopPicks from '../components/TopPicks'
 
 const PicksFlashSale = () => {
     return (

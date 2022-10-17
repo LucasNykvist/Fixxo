@@ -1,0 +1,25 @@
+@import './Navbar';
+@import './Showcase';
+@import './WinterNewArrivals';
+@import './WinterClearance';
+@import './NewArrivals';
+@import './Icons';
+@import './Utilities';
+@import './Button';
+@import './PicksFlashSale';
+@import './OurSpecialty';
+@import './OurSpecialtyBox';
+@import './70off';
+@import './Support';
+@import './Footer';
+@import './Variables';
+
+
+// Font Import
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+html,
+body {
+    font-family: $font-main;
+}

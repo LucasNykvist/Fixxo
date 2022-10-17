@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const SearchIcon = () => {
     return (
-        <a className='icon-1' href='#'><i className="fa-solid fa-magnifying-glass" ></i></a >
+        <NavLink to='/search' end><i className="fa-solid fa-magnifying-glass" ></i></NavLink >
     )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import CustomerSupportIcon from './SupportIcons/CustomerSupportIcon'
-import SecuredPaymentIcon from './SupportIcons/SecuredPaymentIcon'
-import TruckIcon from './SupportIcons/TruckIcon'
+import CustomerSupportIcon from '../components/SupportIcons/CustomerSupportIcon'
+import SecuredPaymentIcon from '../components/SupportIcons/SecuredPaymentIcon'
+import TruckIcon from '../components/SupportIcons/TruckIcon'
 
 const Support = () => {
     return (

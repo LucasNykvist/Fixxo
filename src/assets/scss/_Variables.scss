@@ -1,22 +1,3 @@
-@import './Navbar';
-@import './Showcase';
-@import './WinterNewArrivals';
-@import './WinterClearance';
-@import './NewArrivals';
-@import './Icons';
-@import './Utilities';
-@import './Button';
-@import './PicksFlashSale';
-@import './OurSpecialty';
-@import './OurSpecialtyBox';
-@import './70off';
-@import './Support';
-@import './Footer';
-
-
-// Font Import
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
 // Colors
 $color-dark-gray: #BEBEBE;
 $color-light-gray: #F5F5F5;
@@ -44,8 +25,3 @@ $font-size-16: 1rem;
 $font-size-20: 1.25rem;
 $font-size-45: 2.75rem;
 $font-size-65: 4rem;
-
-html,
-body {
-    font-family: 'poppins';
-}

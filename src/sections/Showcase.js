@@ -1,8 +1,7 @@
 import React from 'react'
 import leftImage from '../assets/images/left-placeholder.svg'
 import rightImage from '../assets/images/right-placeholder.svg'
-import Button from './Buttons/Button'
-import ButtonLight from './Buttons/ButtonLight'
+import Button from '../components/Buttons/Button'
 
 const Showcase = () => {
     return (

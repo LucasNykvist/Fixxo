@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const HeartIcon = () => {
     return (
-        <a className='icon-1' href=''><i class="fa-light fa-heart"></i></a>
+        <NavLink to="/wishlist" end><i class="fa-light fa-heart"></i></NavLink>
     )
 }
 

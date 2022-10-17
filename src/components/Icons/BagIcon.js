@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const BagIcon = () => {
     return (
-        <a className='icon-1' href=''><i class="fa-light fa-bag-shopping"></i></a>
+        <NavLink to="/shoppingcart" end><i class="fa-light fa-bag-shopping"></i></NavLink>
     )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import OurSpecialtyBox from './OurSpecialtyBox'
+import OurSpecialtyBox from '../components/OurSpecialtyBox'
 
 const OurSpecialty = () => {
     return (

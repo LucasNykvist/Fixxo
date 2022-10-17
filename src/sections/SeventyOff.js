@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonFlashSale from './Buttons/ButtonFlashSale'
+import ButtonFlashSale from '../components/Buttons/ButtonFlashSale'
 
 const SeventyOff = () => {
     return (
