@@ -1,20 +1,32 @@
 import React from 'react'
 import MainButton from './MainButton'
-import image from '../assets/images/card-img.jpg'
 
 const ProductBox = (item) => {
+
+    const addToWishlist = (e) => {
+        console.log(`${e} added to wish list`)
+    }
+
+    const addToCompare = (e) => {
+        console.log("added to compare")
+    }
+
+    const addToCart = (e) => {
+        console.log("added to shopping cart")
+    }
+
     return (
         <div className="product-box">
             <div className="product-card">
                 <img src={item.img} alt={item.name} />
                 <div className="card-menu">
-                    <button className='nav-icon'><i class="fa-light fa-heart"></i></button>
-                    <button className='nav-icon'><i class="fa-light fa-code-compare"></i></button>
-                    <button className='nav-icon'><i class="fa-light fa-bag-shopping"></i></button>
+                    <button onClick={addToWishlist} className='nav-icon'><i class="fa-light fa-heart"></i></button>
+                    <button onClick={addToCompare} className='nav-icon'><i class="fa-light fa-code-compare"></i></button>
+                    <button onClick={addToCart} className='nav-icon'><i class="fa-light fa-bag-shopping"></i></button>
                 </div>
 
                 <div className='quick-view'>
-                    <MainButton link="/products" text="QUICK VIEW" />
+                    <MainButton link={`/products/${item.id}`} text="QUICK VIEW" />
                 </div>
 
             </div>

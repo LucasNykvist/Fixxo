@@ -19,7 +19,7 @@ const Navbar = () => {
                 <div className={`nav-links ${!showNavMenu ? "d-none d-md-flex" : ""}`}>
                     <li><NavLink to="/" end>Home</NavLink></li>
                     <li><NavLink to="/categories" end>Categories</NavLink></li>
-                    <li><NavLink to="/products" end>Products</NavLink></li>
+                    <li><NavLink to="/products" >Products</NavLink></li>
                     <li><NavLink to="/contacts" end>Contacts</NavLink></li>
                 </div>
 
