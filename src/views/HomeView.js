@@ -19,7 +19,7 @@ const HomeView = () => {
             <Navbar />
             <Showcase />
             <WinterNewArrivals />
-            <FeaturedProduct />
+            <FeaturedProduct title="Featured Product" />
             <PicksFlashSale />
             <OurSpecialty />
             <FeaturedSale />

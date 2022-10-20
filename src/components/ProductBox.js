@@ -1,27 +1,27 @@
 import React from 'react'
-import Button from './Buttons/Button'
-import NavIcon from './Icons/NavIcon'
 import MainButton from './MainButton'
+import image from '../assets/images/card-img.jpg'
 
-const ProductBox = () => {
+const ProductBox = (item) => {
     return (
         <div className="product-box">
             <div className="product-card">
+                <img src={item.img} alt={item.name} />
                 <div className="card-menu">
-                    <NavIcon icon="fa-light fa-heart position-relative" link="/wishlist" />
-                    <NavIcon icon="fa-light fa-code-compare position-relative" link="/compare" />
-                    <NavIcon icon="fa-light fa-bag-shopping position-relative" link="/shoppingcart" />
+                    <button className='nav-icon'><i class="fa-light fa-heart"></i></button>
+                    <button className='nav-icon'><i class="fa-light fa-code-compare"></i></button>
+                    <button className='nav-icon'><i class="fa-light fa-bag-shopping"></i></button>
                 </div>
 
                 <div className='quick-view'>
-                    <MainButton link="/search" text="QUICK VIEW" />
+                    <MainButton link="/products" text="QUICK VIEW" />
                 </div>
 
             </div>
 
             <div className="product-info">
-                <p className="category">Category</p>
-                <h4>Modern Black Blouse</h4>
+                <p className="category">{item.category}</p>
+                <h4>{item.name}</h4>
                 <ul>
                     <li><i class="fa-solid fa-star"></i></li>
                     <li><i class="fa-solid fa-star"></i></li>
@@ -29,7 +29,7 @@ const ProductBox = () => {
                     <li><i class="fa-solid fa-star"></i></li>
                     <li><i class="fa-solid fa-star"></i></li>
                 </ul>
-                <p class="price">$35.00</p>
+                <p class="price">{item.price}</p>
             </div>
 
         </div >
