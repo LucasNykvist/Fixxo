@@ -1,5 +1,6 @@
 import React from 'react'
 import Breadcrumb from '../components/Breadcrumb'
+import ContactForm from '../components/ContactForm'
 import LocationMap from '../components/LocationMap'
 import Map from '../components/LocationMap'
 import Footer from '../sections/Footer'
@@ -11,6 +12,7 @@ const ContactsView = () => {
             <Navbar />
             <Breadcrumb icon="fa-solid fa-house" where="Contacts" />
             <LocationMap />
+            <ContactForm />
             <Footer />
         </>
     )
