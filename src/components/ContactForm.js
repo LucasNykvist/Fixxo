@@ -28,12 +28,18 @@ const ContactForm = () => {
                         <div className='name-email'>
                             <div className="form-input">
                                 <input className={errors.name && touched.name ? "input-error" : ""} id='name' value={values.name} onBlur={handleBlur} onChange={handleChange} type="text" placeholder='Your Name' />
-                                {errors.name && touched.name && <p className='error-message'>{errors.name}</p>}
+                                <div className="error">
+                                    {errors.name && touched.name && <p className='error-message'>{errors.name}</p>}
+                                </div>
 
                             </div>
+
                             <div className="form-input">
                                 <input className={errors.email && touched.email ? "input-error" : ""} id='email' value={values.email} onBlur={handleBlur} onChange={handleChange} type="email" placeholder='Your Mail' />
-                                {errors.email && touched.email && <p className='error-message'>{errors.email}</p>}
+                                <div className="error">
+                                    {errors.email && touched.email && <p className='error-message'>{errors.email}</p>}
+                                </div>
+
                             </div>
                         </div>
 
