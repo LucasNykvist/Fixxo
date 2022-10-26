@@ -8,13 +8,13 @@ const ProductBoxSmall = () => {
                 <p className='category-sm'>Category</p>
                 <h4>Modern Black Blouse</h4>
                 <ul>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
                 </ul>
-                <p class="price">$35.00</p>
+                <p className="price">$35.00</p>
             </div>
         </div>
     )

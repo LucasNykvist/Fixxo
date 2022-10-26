@@ -2,7 +2,7 @@ import React from 'react'
 
 const CustomerSupportIcon = () => {
     return (
-        <a className='icon-2' href=''><i class="fa-light fa-phone"></i></a>
+        <a className='icon-2' href=''><i className="fa-light fa-phone"></i></a>
     )
 }
 

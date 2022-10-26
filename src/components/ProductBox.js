@@ -20,9 +20,9 @@ const ProductBox = (item) => {
             <div className="product-card">
                 <img src={item.img} alt={item.name} />
                 <div className="card-menu">
-                    <button onClick={addToWishlist} className='nav-icon'><i class="fa-light fa-heart"></i></button>
-                    <button onClick={addToCompare} className='nav-icon'><i class="fa-light fa-code-compare"></i></button>
-                    <button onClick={addToCart} className='nav-icon'><i class="fa-light fa-bag-shopping"></i></button>
+                    <button onClick={addToWishlist} className='nav-icon'><i className="fa-light fa-heart"></i></button>
+                    <button onClick={addToCompare} className='nav-icon'><i className="fa-light fa-code-compare"></i></button>
+                    <button onClick={addToCart} className='nav-icon'><i className="fa-light fa-bag-shopping"></i></button>
                 </div>
 
                 <div className='quick-view'>
@@ -35,13 +35,13 @@ const ProductBox = (item) => {
                 <p className="category">{item.category}</p>
                 <h4>{item.name}</h4>
                 <ul>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
+                    <li><i className="fa-solid fa-star"></i></li>
                 </ul>
-                <p class="price">{item.price}</p>
+                <p className="price">{item.price}</p>
             </div>
 
         </div >
