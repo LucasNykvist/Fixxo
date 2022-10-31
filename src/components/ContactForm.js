@@ -1,12 +1,28 @@
-import { useFormik } from 'formik'
+import { Form, Formik, useFormik } from 'formik'
 import React from 'react'
 import { contactSchema } from '../schemas/Index'
 
-const onSubmit = () => {
-    console.log("submitted");
-}
-
 const ContactForm = () => {
+
+    const onSubmit = () => {
+
+        let json = JSON.stringify(values)
+
+        fetch('https://win22-webapi.azurewebsites.net/api/contactform', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: json
+        })
+            .then(res => {
+                if (res.status === 200) {
+                    console.log("Valid")
+                } else {
+                    console.log("Not Valid")
+                }
+            })
+    }
 
     const { values, errors, touched, isSubmitting, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: {
