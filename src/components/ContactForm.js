@@ -1,10 +1,14 @@
 import { Form, Formik, useFormik } from 'formik'
 import React from 'react'
+import { useState } from 'react'
 import { contactSchema } from '../schemas/Index'
 
 const ContactForm = () => {
 
-    const onSubmit = () => {
+    const [submitted, setSubmitted] = useState(false);
+    const [notSubmitted, setNotSubmitted] = useState(false);
+
+    const onSubmit = (actions) => {
 
         let json = JSON.stringify(values)
 
@@ -16,28 +20,51 @@ const ContactForm = () => {
             body: json
         })
             .then(res => {
+                console.log(res.status);
                 if (res.status === 200) {
-                    console.log("Valid")
+                    setSubmitted(true)
+                    setNotSubmitted(false)
+                    resetForm()
                 } else {
-                    console.log("Not Valid")
+                    setNotSubmitted(true)
+                    setSubmitted(false)
                 }
             })
     }
 
-    const { values, errors, touched, isSubmitting, handleBlur, handleChange, handleSubmit } = useFormik({
+    const { values, errors, touched, resetForm, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: {
             name: "",
             email: "",
             comments: ""
         },
         validationSchema: contactSchema,
-        onSubmit
+        onSubmit,
     })
 
     return (
         <>
+
             <div className="contact-form">
                 <div className='container'>
+
+                    {
+                        submitted ? (
+                            <div className="submitted-box">
+                                <h1>Thank you for your comments!</h1>
+                                <p>We will contact you as soon as possible.</p>
+                            </div>
+                        ) : (<></>)
+                    }
+
+                    {
+                        notSubmitted ? (
+                            <div className="submitted-box false">
+                                <h1>Something went wrong!</h1>
+                                <p>We could not process your comments at this time.</p>
+                            </div>
+                        ) : (<></>)
+                    }
                     <h3>Come in Contact with Us</h3>
                     <form noValidate onSubmit={handleSubmit}>
 
