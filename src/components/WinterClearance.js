@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Buttons/Button'
 import image from '../assets/images/winterClearance.png'
+import { NavLink } from 'react-router-dom'
 
 const WinterClearance = () => {
     return (
@@ -8,7 +9,7 @@ const WinterClearance = () => {
             <div className='wc-info'>
                 <h1>Winter Clearance Up to 70% Off!</h1>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem apriam eaque ipsa quae ab illo inventore.</p>
-                <Button />
+                <Button link="/products" />
             </div>
 
             <img src={image} />

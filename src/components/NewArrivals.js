@@ -7,7 +7,7 @@ const NewArrivals = () => {
         <div className='new-arrivals'>
             <div className='na-info'>
                 <h1>New Arrivals</h1>
-                <Button />
+                <Button link="/products" />
             </div>
 
             <img src={Image} />

@@ -1,12 +1,13 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Button = () => {
+const Button = ({ link }) => {
     return (
-        <a className='btn-theme' href='#'>
+        <NavLink className='btn-theme' to={link}>
             <div className='btn-theme-left'></div>
             SHOP NOW
             <div className='btn-theme-right'></div>
-        </a>
+        </NavLink>
     )
 }
 
