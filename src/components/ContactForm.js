@@ -8,7 +8,7 @@ const ContactForm = () => {
     const [submitted, setSubmitted] = useState(false);
     const [notSubmitted, setNotSubmitted] = useState(false);
 
-    const onSubmit = (actions) => {
+    const onSubmit = () => {
 
         let json = JSON.stringify(values)
 
@@ -20,7 +20,6 @@ const ContactForm = () => {
             body: json
         })
             .then(res => {
-                console.log(res.status);
                 if (res.status === 200) {
                     setSubmitted(true)
                     setNotSubmitted(false)
@@ -61,7 +60,7 @@ const ContactForm = () => {
                         notSubmitted ? (
                             <div className="submitted-box false">
                                 <h1>Something went wrong!</h1>
-                                <p>We could not process your comments at this time.</p>
+                                <p>We could not submit your comments at this time.</p>
                             </div>
                         ) : (<></>)
                     }

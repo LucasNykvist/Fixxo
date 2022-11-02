@@ -6,28 +6,38 @@ import NotFoundView from './views/NotFoundView';
 import CategoriesView from './views/CategoriesView';
 import ProductsView from './views/ProductsView';
 import ProductDetailsView from './views/ProductDetailsView';
-import SearchView from './views/SearchView';
-import CompareView from './views/CompareView';
-import ShoppingcartView from './views/ShoppingcartView';
-import WishlistView from './views/WishlistView';
+import { productContext } from './contexts/contexts';
+import { useEffect, useState } from 'react';
 
 
 
 function App() {
+
+  const [products, setProducts] = useState({
+    featuredProducts: [],
+    allProducts: []
+  })
+
+  useEffect(() => {
+    const fetchFeaturedProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
+      setProducts({ ...products, featuredProducts: await result.json() })
+    }
+    fetchFeaturedProducts()
+  }, [setProducts])
+
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<HomeView />} />
-        <Route path='/categories' element={<CategoriesView />} />
-        <Route path='/products' element={<ProductsView />} />
-        <Route path='/products/:name' element={<ProductDetailsView />} />
-        <Route path='/contacts' element={<ContactsView />} />
-        <Route path='/search' element={<SearchView />} />
-        <Route path='/compare' element={<CompareView />} />
-        <Route path='/wishlist' element={<WishlistView />} />
-        <Route path='/shoppingcart' element={<ShoppingcartView />} />
-        <Route path='*' element={<NotFoundView />} />
-      </Routes>
+      <productContext.Provider value={products}>
+        <Routes>
+          <Route path='/' element={<HomeView products={products.featuredProducts} />} />
+          <Route path='/categories' element={<CategoriesView />} />
+          <Route path='/products' element={<ProductsView />} />
+          <Route path='/products/:articleNumber' element={<ProductDetailsView />} />
+          <Route path='/contacts' element={<ContactsView />} />
+          <Route path='*' element={<NotFoundView />} />
+        </Routes>
+      </productContext.Provider>
     </BrowserRouter>
   );
 }

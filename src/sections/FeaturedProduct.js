@@ -1,8 +1,10 @@
+import { useContext } from 'react'
 import ProductBox from '../components/ProductBox'
-
-
+import { productContext } from '../contexts/contexts'
+import ProductsView from '../views/ProductsView'
 
 const FeaturedProduct = ({ title, products }) => {
+
 
     return (
         <div className='featured-product'>
@@ -14,7 +16,7 @@ const FeaturedProduct = ({ title, products }) => {
 
                 <div className='product-boxes'>
                     {
-                        products.map(product => <ProductBox key={product.id} name={product.name} category={product.category} price={product.price} img={product.img} id={product.id} />)
+                        products.map((products, index) => <ProductBox key={index} product={products} />)
                     }
                 </div>
             </div>
