@@ -1,17 +1,19 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useContext } from 'react'
+import { productContext } from '../contexts/contexts'
 import DetailedProduct from '../sections/DetailedProduct'
 import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 
-const ProductDetailsView = ({ products }) => {
+const ProductDetailsView = () => {
 
+    const featuredProducts = useContext(productContext)
 
 
     return (
         <>
             <Navbar />
-            <DetailedProduct product={products} />
+            <DetailedProduct products={featuredProducts.featuredProducts} />
             <Footer />
         </>
     )
