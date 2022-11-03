@@ -29,7 +29,7 @@ const ProductBox = ({ product }) => {
                     <li><i className="fa-solid fa-star"></i></li>
                     <li><i className="fa-solid fa-star"></i></li>
                 </ul>
-                <p className="price">{product.price}</p>
+                <p className="price">{product.price}$</p>
             </div>
 
         </div >
