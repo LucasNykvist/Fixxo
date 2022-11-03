@@ -1,4 +1,3 @@
-import { FormikConsumer } from 'formik'
 import React from 'react'
 import AllProducts from '../sections/AllProducts'
 import Footer from '../sections/Footer'

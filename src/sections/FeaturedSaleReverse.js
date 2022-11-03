@@ -1,6 +1,5 @@
 import React from 'react'
 import BigBox from '../components/BigBox'
-import FeaturedBoxes from '../components/FeaturedBoxes'
 import ProductBox from '../components/ProductBox'
 
 const FeaturedSaleReverse = ({ products }) => {

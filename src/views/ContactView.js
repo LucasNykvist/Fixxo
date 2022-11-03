@@ -2,7 +2,6 @@ import React from 'react'
 import Breadcrumb from '../components/Breadcrumb'
 import ContactForm from '../components/ContactForm'
 import LocationMap from '../components/LocationMap'
-import Map from '../components/LocationMap'
 import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 

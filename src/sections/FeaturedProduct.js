@@ -1,7 +1,5 @@
-import { useContext } from 'react'
 import ProductBox from '../components/ProductBox'
-import { productContext } from '../contexts/contexts'
-import ProductsView from '../views/ProductsView'
+
 
 const FeaturedProduct = ({ title, products }) => {
 

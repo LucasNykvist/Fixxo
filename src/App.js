@@ -9,9 +9,9 @@ import ProductDetailsView from './views/ProductDetailsView';
 import { productContext } from './contexts/contexts';
 import { useEffect, useState } from 'react';
 
-// MÅL - FIXA DETAILED VIEW
+// MÅL - FIXA DETAILED VIEW **Delvis klar, kan endast nås från specifika element**
 //     - Alla produkter på /products **KLAR**
-//     - 4 produkter i flash sales
+//     - 4 produkter i flash sales **KLAR**
 
 
 
@@ -42,7 +42,7 @@ function App() {
     }
     fetchAllProducts()
 
-  }, [setProducts])
+  }, [])
 
   return (
     <BrowserRouter>
@@ -51,7 +51,7 @@ function App() {
           <Route path='/' element={<HomeView />} />
           <Route path='/categories' element={<CategoriesView />} />
           <Route path='/products' element={<ProductsView products={products.allProducts} />} />
-          <Route path='/products/:articleNumber' element={<ProductDetailsView products={products.allProducts} />} />
+          <Route path='/products/:articleNumber' element={<ProductDetailsView />} />
           <Route path='/contacts' element={<ContactsView />} />
           <Route path='*' element={<NotFoundView />} />
         </Routes>

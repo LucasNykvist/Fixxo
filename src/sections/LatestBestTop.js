@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductBoxesSmall from '../components/ProductBoxesSmall'
-import ProductBoxSmall from '../components/ProductBoxSmall'
+
 
 const LatestBestTop = () => {
     return (

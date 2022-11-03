@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../App.min.css';
 import Navbar from '../sections/Navbar';
 import OurSpecialty from '../sections/OurSpecialty';

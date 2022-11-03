@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from './Buttons/Button'
 import image from '../assets/images/winterClearance.png'
-import { NavLink } from 'react-router-dom'
 
 const WinterClearance = () => {
     return (
@@ -12,7 +11,7 @@ const WinterClearance = () => {
                 <Button link="/products" />
             </div>
 
-            <img src={image} />
+            <img src={image} alt="img" />
         </div>
     )
 }
