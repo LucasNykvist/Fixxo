@@ -10,6 +10,8 @@ import { productContext } from './contexts/contexts';
 import { useEffect, useState } from 'react';
 
 // MÅL - FIXA DETAILED VIEW
+//     - Alla produkter på /products **KLAR**
+//     - 4 produkter i flash sales
 
 
 
@@ -17,7 +19,8 @@ function App() {
 
   const [products, setProducts] = useState({
     featuredProducts: [],
-    allProducts: []
+    allProducts: [],
+    saleProducts: []
   })
 
   useEffect(() => {
@@ -26,6 +29,19 @@ function App() {
       setProducts({ ...products, featuredProducts: await result.json() })
     }
     fetchFeaturedProducts()
+
+    const fetchFlashSaleProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setProducts({ ...products, saleProducts: await result.json() })
+    }
+    fetchFlashSaleProducts()
+
+    const fetchAllProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
+      setProducts({ ...products, allProducts: await result.json() })
+    }
+    fetchAllProducts()
+
   }, [setProducts])
 
   return (
@@ -34,8 +50,8 @@ function App() {
         <Routes>
           <Route path='/' element={<HomeView products={products.featuredProducts} />} />
           <Route path='/categories' element={<CategoriesView />} />
-          <Route path='/products' element={<ProductsView />} />
-          <Route path='/products/:articleNumber' element={<ProductDetailsView products={products.featuredProducts} />} />
+          <Route path='/products' element={<ProductsView products={products.allProducts} />} />
+          <Route path='/products/:articleNumber' element={<ProductDetailsView products={products.allProducts} />} />
           <Route path='/contacts' element={<ContactsView />} />
           <Route path='*' element={<NotFoundView />} />
         </Routes>

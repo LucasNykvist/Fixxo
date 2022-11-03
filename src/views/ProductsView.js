@@ -1,9 +1,16 @@
+import { FormikConsumer } from 'formik'
 import React from 'react'
+import AllProducts from '../sections/AllProducts'
+import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 
-const ProductsView = () => {
+const ProductsView = ({ products }) => {
     return (
-        <Navbar />
+        <>
+            <Navbar />
+            <AllProducts products={products} />
+            <Footer />
+        </>
     )
 }
 
