@@ -17,18 +17,18 @@ import { productContext } from '../contexts/contexts';
 
 const HomeView = () => {
 
-    const featuredProducts = useContext(productContext)
+    const products = useContext(productContext)
 
     return (
         <>
             <Navbar />
             <Showcase />
             <WinterNewArrivals />
-            <FeaturedProduct title="Featured Product" products={featuredProducts.featuredProducts} />
+            <FeaturedProduct title="Featured Product" products={products.featuredProducts} />
             <PicksFlashSale />
             <OurSpecialty />
-            <FeaturedSale />
-            <FeaturedSaleReverse />
+            <FeaturedSale products={products.saleProducts} />
+            <FeaturedSaleReverse products={products.saleProducts} />
             <SeventyOff />
             <LatestBestTop />
             <Support />

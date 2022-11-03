@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
-import ProductBox from './ProductBox'
-import ProductBoxSmall from './ProductBoxSmall'
+import React from 'react'
+
 
 const FeaturedBoxes = () => {
 
 
+
     return (
         <div className='featured-boxes'>
-            {
 
-            }
         </div>
     )
 }

@@ -48,7 +48,7 @@ function App() {
     <BrowserRouter>
       <productContext.Provider value={products}>
         <Routes>
-          <Route path='/' element={<HomeView products={products.featuredProducts} />} />
+          <Route path='/' element={<HomeView />} />
           <Route path='/categories' element={<CategoriesView />} />
           <Route path='/products' element={<ProductsView products={products.allProducts} />} />
           <Route path='/products/:articleNumber' element={<ProductDetailsView products={products.allProducts} />} />

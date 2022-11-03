@@ -7,13 +7,13 @@ import Navbar from '../sections/Navbar'
 
 const ProductDetailsView = () => {
 
-    const featuredProducts = useContext(productContext)
+    const products = useContext(productContext)
 
 
     return (
         <>
             <Navbar />
-            <DetailedProduct products={featuredProducts.featuredProducts} />
+            <DetailedProduct products={products.featuredProducts} />
             <Footer />
         </>
     )
