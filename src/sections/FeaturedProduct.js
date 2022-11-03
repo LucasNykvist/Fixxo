@@ -14,7 +14,7 @@ const FeaturedProduct = ({ title, products }) => {
 
                 <div className='product-boxes'>
                     {
-                        products.map((products, index) => <ProductBox key={index} product={products} />)
+                        products.filter((products, index) => index < 8).map((products, index) => <ProductBox key={index} product={products} />)
                     }
                 </div>
             </div>

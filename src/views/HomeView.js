@@ -24,11 +24,11 @@ const HomeView = () => {
             <Navbar />
             <Showcase />
             <WinterNewArrivals />
-            <FeaturedProduct title="Featured Product" products={products.featuredProducts} />
+            <FeaturedProduct title="Featured Product" products={products.allProducts} />
             <PicksFlashSale />
             <OurSpecialty />
-            <FeaturedSale products={products.saleProducts} />
-            <FeaturedSaleReverse products={products.saleProducts} />
+            <FeaturedSale products={products.allProducts} />
+            <FeaturedSaleReverse products={products.allProducts} />
             <SeventyOff />
             <LatestBestTop />
             <Support />

@@ -13,7 +13,7 @@ const FeaturedSale = ({ products }) => {
                 <BigBox price="2 FOR USD $29" />
                 <div className="featured-boxes">
                     {
-                        products.map((products, index) => <ProductBox key={index} product={products} />)
+                        products.filter((products, index) => index < 20 && index > 15).map((products, index) => <ProductBox key={index} product={products} />)
                     }
                 </div>
 

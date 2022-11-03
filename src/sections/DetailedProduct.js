@@ -12,29 +12,16 @@ const DetailedProduct = () => {
     return (
 
         <>
+
             {
                 products.allProducts.filter(detailed => detailed.articleNumber === articleNumber).map((detailed, index) => (
-                    <div className="detailed-card" key={index}>
-                        <div className="image">
-                            <img src={detailed.imageName} alt="" />
-                        </div>
-                    </div>
-                ))
-            }
-            {
-                products.featuredProducts.filter(detailed => detailed.articleNumber === articleNumber).map((detailed, index) => (
-                    <div className="detailed-card" key={index}>
-                        <div className="image">
-                            <img src={detailed.imageName} alt="" />
-                        </div>
-                    </div>
-                ))
-            }
-            {
-                products.saleProducts.filter(detailed => detailed.articleNumber === articleNumber).map((detailed, index) => (
-                    <div className="detailed-card" key={index}>
-                        <div className="image">
-                            <img src={detailed.imageName} alt="" />
+                    <div className="detailed-product" key={index}>
+                        <div className="container">
+                            <div className="image">
+                                <img src={detailed.imageName} alt="" />
+                                <h1>{detailed.name}</h1>
+                                <h1>{detailed.price}$</h1>
+                            </div>
                         </div>
                     </div>
                 ))

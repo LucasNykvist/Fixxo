@@ -9,11 +9,7 @@ import ProductDetailsView from './views/ProductDetailsView';
 import { productContext } from './contexts/contexts';
 import { useEffect, useState } from 'react';
 
-// MÅL - FIXA DETAILED VIEW **Delvis klar, kan endast nås från specifika element**
-//     - Alla produkter på /products **KLAR**
-//     - 4 produkter i flash sales **KLAR**
-
-
+// MÅL - FIXA DETAILED VIEW **Produktinfo går in!**
 
 function App() {
 
@@ -24,17 +20,17 @@ function App() {
   })
 
   useEffect(() => {
-    const fetchFeaturedProducts = async () => {
-      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
-      setProducts({ ...products, featuredProducts: await result.json() })
-    }
-    fetchFeaturedProducts()
+    // const fetchFeaturedProducts = async () => {
+    //   let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
+    //   setProducts({ ...products, featuredProducts: await result.json() })
+    // }
+    // fetchFeaturedProducts()
 
-    const fetchFlashSaleProducts = async () => {
-      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
-      setProducts({ ...products, saleProducts: await result.json() })
-    }
-    fetchFlashSaleProducts()
+    // const fetchFlashSaleProducts = async () => {
+    //   let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+    //   setProducts({ ...products, saleProducts: await result.json() })
+    // }
+    // fetchFlashSaleProducts()
 
     const fetchAllProducts = async () => {
       let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')

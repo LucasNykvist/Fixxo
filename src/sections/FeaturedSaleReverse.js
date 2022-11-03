@@ -8,7 +8,7 @@ const FeaturedSaleReverse = ({ products }) => {
             <div className='container'>
                 <div className="featured-boxes">
                     {
-                        products.map((products, index) => <ProductBox key={index} product={products} />)
+                        products.filter((products, index) => index > 8 && index < 13).map((products, index) => <ProductBox key={index} product={products} />)
                     }
                 </div>
                 <BigBox price="2 FOR USD $49" />
