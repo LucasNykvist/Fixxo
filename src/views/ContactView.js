@@ -6,6 +6,7 @@ import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 
 const ContactsView = () => {
+    window.top.document.title = "Contacts | Fixxo"
     return (
         <>
             <Navbar />

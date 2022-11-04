@@ -7,6 +7,8 @@ import Navbar from '../sections/Navbar'
 
 const ProductDetailsView = () => {
 
+    window.top.document.title = "Product | Fixxo"
+
 
     return (
         <>

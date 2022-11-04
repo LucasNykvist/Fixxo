@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../sections/Navbar'
 
 const NotFoundView = () => {
+    window.top.document.title = "Not Found | Fixxo"
     return (
         <>
             <Navbar />

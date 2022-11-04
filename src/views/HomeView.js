@@ -17,6 +17,7 @@ import { productContext } from '../contexts/contexts';
 
 const HomeView = () => {
 
+    window.top.document.title = "Home | Fixxo"
     const products = useContext(productContext)
 
     return (

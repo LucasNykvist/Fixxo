@@ -4,6 +4,7 @@ import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 
 const ProductsView = ({ products }) => {
+    window.top.document.title = "Products | Fixxo"
     return (
         <>
             <Navbar />

@@ -13,6 +13,8 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
+
+
   const [products, setProducts] = useState({
     featuredProducts: [],
     allProducts: [],
