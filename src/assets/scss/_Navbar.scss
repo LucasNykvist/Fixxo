@@ -68,6 +68,16 @@
     }
 }
 
+.nav-icon {
+    position: relative;
+
+    .quantity {
+        top: -10px;
+        left: 25px;
+        position: absolute;
+    }
+}
+
 @media (max-width: 770px) {
     .__navbar {
         .container {

@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import Logo from '../assets/images/Logo.svg'
 import { NavLink } from 'react-router-dom'
 import NavIcon from '../components/Icons/NavIcon'
+import { useShoppingCart } from '../contexts/ShoppingCartContext'
 
 const Navbar = () => {
     const [showNavMenu, setShowNavMenu] = useState(false)
+
+    const { cartQuantity } = useShoppingCart()
 
     const toggleNavMenu = () => {
         setShowNavMenu(!showNavMenu)
@@ -27,7 +30,11 @@ const Navbar = () => {
                     <NavIcon icon="fa-solid fa-magnifying-glass position-relative" link="/search" />
                     <NavIcon hideOnMobile={true} icon="fa-light fa-code-compare position-relative" link="/compare" />
                     <NavIcon hideOnMobile={true} icon="fa-light fa-heart position-relative" link="/wishlist" value="1" />
-                    <NavIcon icon="fa-light fa-bag-shopping position-relative" link="/shoppingcart" value="3" />
+
+                    <button className="nav-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                        <i className='fa-light fa-bag-shopping position-relative'></i>
+                        <span className='quantity badge rounded-pill'>{cartQuantity}</span>
+                    </button>
 
                     <button onClick={toggleNavMenu} className='d-md-none nav-icon btn-menu-icon'><i className='fa-solid fa-bars'></i></button>
                 </div>
