@@ -14,14 +14,17 @@ const ShoppingCartItem = ({ item }) => {
                     {item.product.name}
                 </div>
                 <div className="item-info-quantity">
-                    <button onClick={() => incrementQuantity(item)}>+</button>
-                    <span>{item.quantity}</span>
-                    <button onClick={() => decrementQuantity(item)}>-</button>
+                    <button className='btn-left' onClick={() => incrementQuantity(item)}>+</button>
+                    <span className='quantity'>{item.quantity}</span>
+                    <button className='btn-right' onClick={() => decrementQuantity(item)}>-</button>
                 </div>
+
                 <div className="item-price">
-                    <div>{item.product.price * item.quantity}</div>
+                    <div>{item.product.price * item.quantity}$</div>
                     <button onClick={() => removeItem(item.articleNumber)}><i class="fa-regular fa-trash"></i></button>
                 </div>
+
+
             </div>
         </div>
     )
