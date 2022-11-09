@@ -3,10 +3,11 @@ import { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import { productContext } from '../contexts/contexts';
+import { useShoppingCart } from '../contexts/ShoppingCartContext';
 
 const DetailedProduct = () => {
 
-
+    const { incrementQuantity } = useShoppingCart()
     const products = useContext(productContext)
     const { articleNumber } = useParams();
 
@@ -71,7 +72,7 @@ const DetailedProduct = () => {
                                             <div className="current">1</div>
                                             <button className="increment">+</button>
                                         </div>
-                                        <button>ADD TO CART</button>
+                                        <button onClick={() => incrementQuantity({ articleNumber: detailed.articleNumber, product: detailed })}>ADD TO CART</button>
                                     </div>
 
                                 </div>
