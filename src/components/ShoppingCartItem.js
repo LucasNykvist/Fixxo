@@ -15,7 +15,7 @@ const ShoppingCartItem = ({ item }) => {
                 </div>
                 <div className="item-info-quantity">
                     <button className='btn-left' onClick={() => incrementQuantity(item)}>+</button>
-                    <span className='quantity'>{item.quantity}</span>
+                    <span data-testid="quantity" className='quantity'>{item.quantity}</span>
                     <button className='btn-right' onClick={() => decrementQuantity(item)}>-</button>
                 </div>
 
