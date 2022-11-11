@@ -1,37 +1,17 @@
-import ContactForm from "../components/ContactForm"
-import { render, screen, fireEvent } from '@testing-library/react'
-import user from '@testing-library/user-event'
-
+import React from "react";
+import ContactForm from '../components/ContactForm'
+import { render, screen } from '@testing-library/react'
 
 describe(ContactForm, () => {
-    const onSubmit = jest.fn()
+    it("Form Should Exist", () => {
+        render(<ContactForm />)
 
-    beforeEach(() => {
-        onSubmit.mockClear()
-        render(<ContactForm onSubmit={onSubmit} />)
+        const form = screen.getByTestId('form')
+
+        expect(form).toBeTruthy()
     })
 
-    it("onSubmit should be true", () => {
-        user.type(getName(), "Lucas")
-        user.type(getEmail(), "Lucasnykvist@gmail.com")
-        user.type(getComment(), "Test comment")
+    it("Post Comments Button Should Submit Form", () => {
 
-        const button = screen.getByRole('button', { name: /post comments/i })
-        fireEvent.click(button)
-
-        expect(onSubmit).toBeTruthy()
     })
-
 })
-
-const getName = () => {
-    return screen.getAllByPlaceholderText(/your name/i)
-}
-
-const getEmail = () => {
-    return screen.getByPlaceholderText(/your mail/i)
-}
-
-const getComment = () => {
-    return screen.getByPlaceholderText(/comments/i)
-}

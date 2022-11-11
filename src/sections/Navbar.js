@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <nav className='__navbar'>
             <div className='container d-flex justify-content-between'>
-                <NavLink to="/">
+                <NavLink data-testid="logo" to="/">
                     <img src={Logo} alt='' />
                 </NavLink>
                 <div className={`nav-links ${!showNavMenu ? "d-none d-md-flex" : ""}`}>
