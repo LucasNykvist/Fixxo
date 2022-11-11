@@ -6,7 +6,7 @@ const ProductBoxesSmall = ({ products, title }) => {
         <div className='product-boxes-small'>
             <h3>{title}</h3>
             {
-                products.filter((products, index) => index < 4).map((products, index) => <ProductBoxSmall key={index} product={products} />)
+                products.filter((products, index) => index < 3).map((products, index) => <ProductBoxSmall key={index} product={products} />)
             }
         </div>
     )
