@@ -2,13 +2,13 @@ import React from 'react'
 import ProductBoxesSmall from '../components/ProductBoxesSmall'
 
 
-const LatestBestTop = () => {
+const LatestBestTop = ({ products }) => {
     return (
         <div className='latest-best-top'>
             <div className='container'>
-                <ProductBoxesSmall title="Latest Product" />
-                <ProductBoxesSmall title="Best Selling Product" />
-                <ProductBoxesSmall title="Top Reacted Product" />
+                <ProductBoxesSmall title="Latest Product" products={products} />
+                <ProductBoxesSmall title="Best Selling Product" products={products} />
+                <ProductBoxesSmall title="Top Reacted Product" products={products} />
             </div>
         </div>
     )

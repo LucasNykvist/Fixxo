@@ -1,12 +1,14 @@
 import React from 'react'
 
-const ProductBoxSmall = () => {
+const ProductBoxSmall = ({ product }) => {
     return (
         <div className='product-box-small'>
-            <div className='product-box-small-card'></div>
+            <div className='product-box-small-card'>
+                <img src={product.imageName} alt={product.name} />
+            </div>
             <div className='product-box-small-info'>
-                <p className='category-sm'>Category</p>
-                <h4>Modern Black Blouse</h4>
+                <p className='category-sm'>{product.category}</p>
+                <h4>{product.name}</h4>
                 <ul>
                     <li><i className="fa-solid fa-star"></i></li>
                     <li><i className="fa-solid fa-star"></i></li>
@@ -14,7 +16,7 @@ const ProductBoxSmall = () => {
                     <li><i className="fa-solid fa-star"></i></li>
                     <li><i className="fa-solid fa-star"></i></li>
                 </ul>
-                <p className="price">$35.00</p>
+                <p className="price">{product.price}$</p>
             </div>
         </div>
     )

@@ -31,7 +31,7 @@ const HomeView = () => {
             <FeaturedSale products={products.allProducts} />
             <FeaturedSaleReverse products={products.allProducts} />
             <SeventyOff />
-            <LatestBestTop />
+            <LatestBestTop products={products.allProducts} />
             <Support />
             <Footer />
         </>
