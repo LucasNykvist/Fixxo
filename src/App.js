@@ -36,7 +36,7 @@ function App() {
             <Route path='/' element={<HomeView />} />
             <Route path='/categories' element={<CategoriesView />} />
             <Route path='/products' element={<ProductsView products={products.allProducts} />} />
-            <Route path='/products/:articleNumber' element={<ProductDetailsView />} />
+            <Route path='/products/:articleNumber' element={<ProductDetailsView products={products.allProducts} />} />
             <Route path='/contacts' element={<ContactsView />} />
             <Route path='*' element={<NotFoundView />} />
           </Routes>

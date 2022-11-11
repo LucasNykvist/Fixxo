@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
+import ProductBox from '../components/ProductBox';
 import { productContext } from '../contexts/contexts';
 import { useShoppingCart } from '../contexts/ShoppingCartContext';
 
-const DetailedProduct = () => {
+const DetailedProduct = ({ product }) => {
 
     const menuData = [
         {
@@ -143,6 +144,27 @@ const DetailedProduct = () => {
                         <p>On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem. </p>
                     </div>
                 </div>
+            </div>
+
+            <div className="related-products">
+                <div className="container">
+
+                    <div className="top">
+                        <h2>Related Products</h2>
+                        <div className="btns">
+                            <button><i class="fa-solid fa-chevron-left"></i></button>
+                            <button><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div className="related">
+                        {
+                            product.filter((product, index) => index < 21 && index > 16).map((product, index) => (<ProductBox product={product} index={index} />))
+                        }
+                    </div>
+
+                </div>
+
             </div>
         </>
 

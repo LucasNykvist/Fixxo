@@ -5,7 +5,7 @@ import DetailedProduct from '../sections/DetailedProduct'
 import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 
-const ProductDetailsView = () => {
+const ProductDetailsView = ({ products }) => {
 
     window.top.document.title = "Product | Fixxo"
 
@@ -13,7 +13,7 @@ const ProductDetailsView = () => {
     return (
         <>
             <Navbar />
-            <DetailedProduct />
+            <DetailedProduct product={products} />
             <Footer />
         </>
     )
