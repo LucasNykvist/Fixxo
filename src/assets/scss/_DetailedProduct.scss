@@ -17,12 +17,15 @@
 
         .product {
             display: flex;
+            justify-content: center;
             flex-direction: row;
 
             .product-images {
                 width: 50%;
 
                 .main-image {
+                    display: flex;
+                    justify-content: center;
                     width: 100%;
 
                     img {
@@ -44,7 +47,6 @@
             }
 
             .product-info {
-                width: 50%;
                 margin-left: 1.5rem;
 
                 h1 {
@@ -346,9 +348,22 @@
 @media (max-width: 1080px) {
 
     .product {
+        width: 100%;
         margin-top: 2rem;
         justify-content: center;
         flex-wrap: wrap;
+
+        .product-images {
+            .main-image {
+                width: 300px img {
+                    width: 300px;
+                }
+            }
+        }
+
+        .product-info {
+            margin-left: 0;
+        }
 
         .small-image {
             display: none;
