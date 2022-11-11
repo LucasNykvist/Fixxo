@@ -10,8 +10,4 @@ describe(ContactForm, () => {
 
         expect(form).toBeTruthy()
     })
-
-    it("Post Comments Button Should Submit Form", () => {
-
-    })
 })
