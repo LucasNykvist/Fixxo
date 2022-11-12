@@ -69,11 +69,11 @@ const DetailedProduct = ({ product }) => {
                                     <h1>{detailed.name}</h1>
                                     <p className='sku-brand'>SKU: 12345670 BRAND: The Northland</p>
                                     <ul className="rating">
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i className="fa-solid fa-star"></i></li>
+                                        <li><i className="fa-solid fa-star"></i></li>
+                                        <li><i className="fa-solid fa-star"></i></li>
+                                        <li><i className="fa-solid fa-star"></i></li>
+                                        <li><i className="fa-solid fa-star"></i></li>
                                     </ul>
                                     <h3 className='price'>${detailed.price}</h3>
                                     <p className='description'>Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. (<Link to={"/read-more"}>read more</Link >) </p>
